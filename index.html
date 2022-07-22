@@ -1,12 +1,474 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-  <h1>Привіт</h1>  
-</body>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice cream</title>
+
+    <!-- Project fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- AOS animation -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- Custom styles -->
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/index.min.css" />
+
+    <!-- js-header -->
+    <script type="module" src="./js/modal_buy-now.js"></script>
+    <script type="module" src="./js/modal_buy-now-mobile.js"></script>
+
+    <!-- modal_buy-now-MobMenu.js -->
+
+
+    <!-- <script type="module" src="./js/modal-mobMen.js"></script> -->
+    <script type="module" src="./js/menu.js"></script>
+
+    <script type="module" src="./js/map.js"></script>
+
+    <script type="module" src="./js/header-scroll.js"></script>
+
+    <!-- js-products -->
+    <script type="module" src="./js/cream.js"></script>
+    <script type="module" src="./js/coffee.js"></script>
+    <script type="module" src="./js/milkshakes.js"></script>
+
+    <!-- js-about -->
+    <script type="module" src="./js/modal-about.js"></script>
+
+    <!--js-contacts  -->
+    <script type="module" src="./js/modal-contacts.js"></script>
+    <script type="module" src="./js/map.js"></script>
+  </head>
+
+  <body>
+    <!-- Шапка сайту -->
+    <header class="header" id="header">
+      <div class="container header__container">
+        <a href="#home">
+          <svg class="logo__icon" width="199" height="50">
+            <use href="./images/sprite.svg#logo"></use>
+          </svg>
+        </a>
+    
+        <nav class="site-nav">
+          <ul class="site-nav__list list">
+            <li class="site-nav__item">
+              <a class="site-nav__link link" href="#home">Home</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link link" href="#products">Our products</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link link" href="#how">How it&#180;s made?</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link link" href="#about">About us</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+    
+        <!-- mobile-menu -->
+        <div class="block-menu">
+          <button class="menu-button burger__btn" aria-expanded="false" aria-controls="mobile-menu" type="button"
+            data-menu-open>
+            <svg class="burger" width="20" height="20" aria-label="Переключатель мобильного меню">
+              <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <button class="btn btn--mode-light buy-now__btn" type="button" data-modal-open>
+            Buy now
+            <svg class="narrow" aria-label="narrow-right" width="10" height="12">
+              <use href="./images/sprite.svg#narrow-right-red"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="mobile-menu is-closed" id="mobile-menu" data-menu>
+          <div class="mobile-menu__container">
+            <button class="menu-button cross__btn" type="button" data-menu-close>
+              <svg class="cross" width="14" height="14">
+                <use href="./images/sprite.svg#icon-cross"></use>
+              </svg>
+            </button>
+    
+            <button class="btn btn--mode-light buy-now__btn-mobile" type="button" data-buyNow-mobile-open>
+              Buy now
+              <svg class="narrow" aria-label="narrow-right" width="10" height="12">
+                <use href="./images/sprite.svg#narrow-right-red"></use>
+              </svg>
+            </button>
+    
+            <ul class="mobile-menu__nav list">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link link" href="#home">Home</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link link" href="#products">Our products</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link link" href="#how">How it&#180;s made?</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link link" href="#about">About us</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Секція Герой -->
+    <section id="home" class="hero section">
+      <div class="hero__container container">
+        <div class="title-figure-wrapper">
+          <div class="title-list-wrapper">
+            <h1 class="hero__tagline">
+              ice cream<br />
+              made with<br />
+              <span class="hero__tagline--accent">passion</span>
+            </h1>
+            <ul class="hero__list list">
+              <li class="hero__item">
+                <a href="#products" class="hero__link hero__link--dark-mode">Products</a>
+              </li>
+              <li class="hero__item hero__item">
+                <a href="#how" class="hero__link hero__link--light-mode link">
+                  How it’s made?</a>
+              </li>
+            </ul>
+          </div>
+          <div class="figure-wrapper">
+            <div class="figure-block figure-block--first">
+              <div class="white-circle"></div>
+              <p class="figure-number">16</p>
+              <p class="figure-text">cafes</p>
+            </div>
+            <div class="figure-block figure-block--second">
+              <div class="white-circle"></div>
+              <p class="figure-number">23</p>
+              <p class="figure-text">food trucks</p>
+            </div>
+          </div>
+        </div>
+        <div class="milk-description-wrapper">
+          <div class="milk-container">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="
+                  ../src/images/hero-img/milk_lg.png    1x,
+                  ../src/images/hero-img/milk_lg@2x.png 2x
+                " type="image/png" />
+              <source media="(min-width: 768px)" srcset="
+                  ../src/images/hero-img/milk_md.png    1x,
+                  ../src/images/hero-img/milk_md@2x.png 2x
+                " type="image/png" />
+              <img class="milk-img" src="../src/images/hero-img/milk_md.png" alt="jar with a milk" loading="lazy" />
+            </picture>
+          </div>
+          <div class="milk-description">
+            <p class="milk-description-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et
+            </p>
+            <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%80%D0%BE%D0%B6%D0%B5%D0%BD%D0%BE%D0%B5"
+              class="product-btn milk-description-link" rel="noopener noreferrer" target="_blank">
+              <svg class="product-btn__icons" width="7" height="7">
+                <use href="./images/sprite.svg#icon-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="ellipse hero__ellipse"></div>
+        <picture>
+          <source media="(min-width: 1200px)" srcset="
+              ../src/images/hero-img/ice-cream_lg.png    1x,
+              ../src/images/hero-img/ice-cream_lg@2x.png 2x
+            " type="image/png" />
+          <source media="(min-width: 768px)" srcset="
+              ../src/images/hero-img/ice-cream_md.png    1x,
+              ../src/images/hero-img/ice-cream_md@2x.png 2x
+            " type="image/png" />
+          <source media="(max-width: 767.98px)" srcset="
+              ../src/images/hero-img/ice-cream_sm.png    1x,
+              ../src/images/hero-img/ice-cream_sm@2x.png 2x
+            " type="image/png" />
+          <img class="hero__img hero__img-ice-cream" src="../src/images/hero-img/ice-cream_sm.png" alt="ice-cream"
+            loading="lazy" />
+        </picture>
+        <picture>
+          <source media="(min-width: 1200px)" srcset="
+              ../src/images/hero-img/girl_lg.png    1x,
+              ../src/images/hero-img/girl_lg@2x.png 2x
+            " type="image/png" />
+          <source media="(min-width: 768px)" srcset="
+              ../src/images/hero-img/girl_md.png    1x,
+              ../src/images/hero-img/girl_md@2x.png 2x
+            " type="image/png" />
+          <img class="girl-img" src="../src/images/hero-img/girl_md.png" alt="girl with ice-cream" loading="lazy" />
+        </picture>
+      </div>
+    </section>
+   
+    <!-- Секція Меню -->
+    <section class="section" id="products">
+      <div class="container product">
+        <label class="section-label product__label">100% natural</label>
+        <h2 class="section-title product__title">products</h2>
+        <ul class="list products__list">
+          <!--section cream-->
+          <li class="item products__item">
+            <div class="products__item--box products__item--cream" data-cream-product>
+              <h3 class="product-name">ice cream</h3>
+              <p class="product-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et
+              </p>
+              <a class="product-btn" data-cream-open><svg class="product-btn__icons" width="10" height="10">
+                  <use href="./images/sprite.svg#icon-arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="window-product window-cream is-hidden" data-cream>
+              <h3 class="window-name window-name--cream">ice cream</h3>
+    
+              <p class="window-description window-description--cream">
+                Ice cream is a sweetened frozen food typically eaten as a snack or
+                dessert. It may be made from milk or cream and is flavoured with a
+                sweetener, either sugar or an alternative, and a spice, such as
+                cocoa or vanilla, or with fruit such as strawberries or peaches. It
+                can also be made by whisking a flavored cream base and liquid
+                nitrogen together. Food coloring is sometimes added, in addition to
+                stabilizers. The mixture is cooled below the freezing point of water
+                and stirred to incorporate air spaces and to prevent detectable ice
+                crystals from forming. The result is a smooth, semi-solid foam that
+                is solid at very low temperatures (below 2 °C or 35 °F). It becomes
+                more malleable as its temperature increases.
+              </p>
+              <button class="window-btn window-btn-cream" type="button" data-cream-close>
+                <svg class="window-cream--svg" width="10" height="10">
+                  <use href="./images/sprite.svg#icon-arrow-left"></use>
+                </svg>
+              </button>
+            </div>
+          </li>
+          <!--section coffee-->
+          <li class="item products__item">
+            <div class="products__item--box products__item--coffee" data-coffee-product>
+              <h3 class="product-name">ice coffee</h3>
+              <p class="product-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et
+              </p>
+              <a class="product-btn product-btn--coffee" data-coffee-open><svg class="product-btn__icons" width="10"
+                  height="10">
+                  <use href="./images/sprite.svg#icon-arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="window-product window-coffee is-hidden" data-coffee>
+              <h3 class="window-name window-name--coffee">ice coffee</h3>
+    
+              <p class="window-description window-description--coffee">
+                Iced coffee is a coffee beverage served cold. It may be prepared
+                either by brewing coffee normally (i.e. carafe, French press, etc.)
+                and then serving it over ice or in cold milk, or by brewing the
+                coffee cold. In hot brewing, sweeteners and flavoring may be added
+                before cooling, as they dissolve faster. Iced coffee can also be
+                sweetened with pre-dissolved sugar in water. Pre-packaged iced
+                coffee is available as a grocery item in several countries, though
+                without ice. Iced coffee is also regularly available in most coffee
+                shops. Iced coffee is generally brewed at a higher strength than
+                normal coffee, since it is diluted by the melting ice.
+              </p>
+              <button class="window-btn window-btn-coffee" type="button" data-coffee-close>
+                <svg class="window-coffee--svg" width="10" height="10">
+                  <use href="./images/sprite.svg#icon-arrow-left"></use>
+                </svg>
+              </button>
+            </div>
+          </li>
+          <!--section milkshakes-->
+          <li class="item products__item">
+            <div class="products__item--box products__item--milkshakes" data-milkshakes-product>
+              <h3 class="product-name">milkshakes</h3>
+              <p class="product-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et
+              </p>
+              <a class="product-btn product-btn--milkshakes" data-milkshakes-open><svg class="product-btn__icons" width="10"
+                  height="10">
+                  <use href="./images/sprite.svg#icon-arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="window-product window-milkshakes is-hidden" data-milkshakes>
+              <h3 class="window-name window-name--milkshakes">milkshakes</h3>
+    
+              <p class="window-description window-description--milkshakes">
+                A milkshake (sometimes simply called a shake) is a sweet beverage
+                made by blending milk, ice cream, and flavorings or sweeteners such
+                as butterscotch, caramel sauce, chocolate syrup, fruit syrup, or
+                whole fruit into a thick, sweet, cold mixture. It may also be made
+                using a base made from non-dairy products, including plant milks
+                such as almond milk, coconut milk, or soy milk. Milkshakes
+                originated in the United States around the turn of the 20th century,
+                and grew in popularity following the introduction of electric
+                blenders in the subsequent two decades. They became a common part of
+                youth popular culture, as ice cream shops were a culturally
+                acceptable meeting place for youth, and milkshakes became symbolic
+                of the innocence of youth.
+              </p>
+              <button class="window-btn window-btn-milkshakes" type="button" data-milkshakes-close>
+                <svg class="window-milkshakes--svg" width="10" height="10">
+                  <use href="./images/sprite.svg#icon-arrow-left"></use>
+                </svg>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Секція Про нас -->
+    <section class="about section" id="how">
+      <div class="container about__container">
+        <p class="section-label about__label">Tradition and love</p>
+        <h2 class="section-title about__title">How it’s made?</h2>
+    
+        <div class="about__content">
+          <div class="about__thumb">
+            <picture>
+              <!-- Набір зображень для десктопних екранів -->
+              <source media="(min-width: 1200px)" srcset="
+                  ../src/images/about/about_lg.webp    1x,
+                  ../src/images/about/about_lg@2x.webp 2x
+                " type="image/webp" />
+              <source media="(min-width: 1200px)" srcset="
+                  ../src/images/about/about_lg.png    1x,
+                  ../src/images/about/about_lg@2x.png 2x
+                " type="image/png" />
+              <!-- Набір зображень для планшетних екранів -->
+              <source media="(min-width: 768px)" srcset="
+                  ../src/images/about/about_md.webp    1x,
+                  ../src/images/about/about_md@2x.webp 2x
+                " type="image/webp" />
+              <source media="(min-width: 768px)" srcset="
+                  ../src/images/about/about_md.png    1x,
+                  ../src/images/about/about_md@2x.png 2x
+                " type="image/png" />
+              <!-- Набір зображень для мобільних екранів -->
+              <source media="(max-width: 767px)" srcset="
+                  ../src/images/about/about_sm.webp    1x,
+                  ../src/images/about/about_sm@2x.webp 2x
+                " type="image/webp" />
+              <source media="(max-width: 767px)" srcset="
+                  ../src/images/about/about_sm.png    1x,
+                  ../src/images/about/about_sm@2x.png 2x
+                " type="image/png" />
+              <!-- Дефолтне зображення, яке відпрацює у будь-якому випадку -->
+              <img class="img about__img" src="../src/images/about/about_sm.png" alt="pitcher of milk and cow" width="280"
+                height="279" loading="lazy" />
+            </picture>
+          </div>
+    
+          <div class="about__right-side">
+            <ul class="about__list list">
+              <li class="about__item">
+                <p>
+                  Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel
+                  justo cursus, faucibus lorem eget, egestas eros. Maecenas eleifend
+                  erat at justo fringilla.
+                </p>
+              </li>
+              <li class="about__item">
+                <p>
+                  Curabitur lacinia enim at ex blandit, vel pellentesque odio
+                  elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum
+                  euismod nisl suscipit ligula volutpat, a feugiat urna maximus.
+                  Cras massa nibh, tincidunt.
+                </p>
+              </li>
+              <li class="about__item">
+                <p>Aliquam erat volutpat. Aenean accumsan.</p>
+              </li>
+            </ul>
+    
+            <button class="about__btn btn btn--mode-light" type="button" data-modal-about-open>
+              Read more
+              <svg class="about__icon" width="7" height="14">
+                <use href="./images/sprite.svg#narrow-right-red"></use>
+              </svg>
+            </button>
+            <div class="backdrop is-hidden" data-modal-about>
+    
+              <!-- Модальне вiкно секцiї about -->
+              <div class="modal-about">
+                <button class="modal-wrapper__btn" type="button" data-modal-about-close>
+                  <svg class="modal-wrapper__icon" aria-label="Закрыть окно" width="18" height="18">
+                    <use href="./images/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <strong class="section-label modal-about__title">How it’s made?</strong>
+                <p class="modal-about__text">Commercial ice cream is made with six steps:
+                  Milk, cream, milk solids, sugars, modifying agents and flavourings are blended together in stainless steel
+                  vats.
+                  The mix is homogenised to create a consistent texture.
+                  The mix is pasteurised by heating at 82-85°C for 15 seconds then cooled to destroy bacteria.
+                  The mix is left alone for 2-24 hours so fat globules solidify and viscosity increases. Flavours or
+                  colourings are added.
+                  The mix is frozen (at about -7°C) and beaten (or ‘agitated’). This adds air to the mix.
+                </p>
+                <div class="modal-about__bottom">
+    
+                  <div class="modal-about__bottom-text">
+                    <p>
+                      The ice cream is moulded, packaged and frozen at around -25°C to allow it to harden.
+                    </p>
+                  </div>
+                  <div class="modal-about__bottom-thumb">
+                    <picture>
+                      <source media="(min-width: 1200px)" srcset="
+                                                                        ../src/images/about/milk_lg.webp    1x,
+                                                                        ../src/images/about/milk_lg@2x.webp 2x
+                                                                      " type="image/png" />
+                      <source media="(min-width: 768px)" srcset="
+                                                                        ../src/images/about/milk_md.webp    1x,
+                                                                        ../src/images/about/milk_md@2x.webp 2x
+                                                                      " type="image/png" />
+                      <img class="modal-about__bottom-img img" src="../src/images/hero-img/milk_md.png"
+                        alt="jar with a milk" loading="lazy" />
+                    </picture>
+                  </div>
+    
+                </div>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <include src="./partials/advantages.html"></include>
+    <include src="./partials/gallery.html"></include>
+    <include src="./partials/reviews.html"></include>
+    <include src="./partials/contacts.html"></include>
+    <include src="./partials/map.html"></include>
+    <include src="./partials/buy-now-modal.html"></include>
+    <include src="./partials/buy-now-modal__mobile.html"></include>
+    <include src="./partials/footer.html"></include>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/slider.js"></script>
+  </body>
 </html>
