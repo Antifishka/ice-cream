@@ -1134,8 +1134,8 @@ img {
 
 .modal-wrapper__btn {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 10px;
+  right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4343,15 +4343,15 @@ img {
 }
 
 .advantages__item:nth-child(1)::before {
-  background-image: url(./images/abvantages/bucketmilk.png);
+  background-image: url(images/abvantages/bucketmilk.png);
 }
 
 .advantages__item:nth-child(2)::before {
-  background-image: url(./images/abvantages/bucketapplepng.png);
+  background-image: url(images/abvantages/bucketapplepng.png);
 }
 
 .advantages__item:nth-child(3)::before {
-  background-image: url(./images/abvantages/icecream.png);
+  background-image: url(images/abvantages/icecream.png);
 }
 
 .advantages__item-title {
