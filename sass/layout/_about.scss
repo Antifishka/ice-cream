@@ -7,9 +7,11 @@
     background-position-y: 570px;
     background-size: contain;
     background-image: url(./images/about/bg-about_sm.png);
+    background-image: url(./images/about/bg-about_sm.webp);
 
     @include mq(retina){
         background-image: url(./images/about/bg-about_sm@2x.png);
+        background-image: url(./images/about/bg-about_sm@2x.webp);
     }
 
     @include mq(tablet){
@@ -19,9 +21,11 @@
     @include mq(desktop){
         background-position-y: 236px;
         background-image: url(./images/about/bg-about_lg.png);
+        background-image: url(./images/about/bg-about_lg.webp);
 
         @include mq(retina){
             background-image: url(./images/about/bg-about_lg@2x.png);
+            background-image: url(./images/about/bg-about_lg@2x.webp);
         }
     }
 
